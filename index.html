@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rekha Sharma — Astrology & Numerology | Get Your Karma Aligned</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #F2ECDF;
+    --cream-2: #E9DFC8;
+    --card: #FFFFFF;
+    --navy: #12283F;
+    --navy-deep: #0B1D30;
+    --gold: #B8842E;
+    --gold-bright: #F6C443;
+    --umber-dark: #2B1B10;
+    --umber-light: #8C5A22;
+    --ink: #262220;
+    --muted: #8B857A;
+    --line: #D8CFBC;
+    --max: 1120px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Manrope', sans-serif;
+    font-weight:800;
+    margin:0 0 0.4em 0;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+  }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 24px; }
+  .eyebrow{
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:700;
+    font-family:'Manrope',sans-serif;
+  }
+
+  /* ---------- Ganesha emblem strip ---------- */
+  .emblem-strip{
+    background: var(--navy); text-align:center; padding:14px 0 10px;
+  }
+  .emblem-strip svg{ width:44px; height:44px; display:block; margin:0 auto; }
+  .emblem-strip .om{
+    color:var(--gold-bright); font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase;
+    font-family:'Manrope',sans-serif; font-weight:700; margin-top:6px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(242,236,223,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px; max-width:var(--max); margin:0 auto;
+  }
+  .brand{
+    font-family:'Manrope', sans-serif; font-size:1.25rem; font-weight:800;
+    display:flex; align-items:center; gap:9px; color:var(--navy);
+  }
+  .brand .badge{
+    width:26px; height:26px; border-radius:7px; background:var(--gold-bright);
+    display:flex; align-items:center; justify-content:center; font-size:14px;
+  }
+  .nav-links{ display:flex; gap:30px; font-size:0.9rem; font-weight:500; }
+  .nav-links a{ text-decoration:none; color:var(--ink); transition:color .2s; }
+  .nav-links a:hover{ color:var(--gold); }
+  .nav-cta{
+    background:var(--navy); color:#fff; padding:11px 22px;
+    border-radius:4px; text-decoration:none; font-size:0.85rem; font-weight:700;
+    font-family:'Manrope',sans-serif; transition:background .2s;
+  }
+  .nav-cta:hover{ background:var(--navy-deep); }
+  @media (max-width:800px){ .nav-links{ display:none; } }
+
+  /* ---------- Hero ---------- */
+  .hero{ padding:44px 0 20px; }
+  .crumb{ font-size:0.85rem; color:var(--muted); margin-bottom:14px; }
+  .hero h1{ font-size:clamp(1.7rem, 3.4vw, 2.5rem); line-height:1.2; max-width:760px; }
+
+  .banner{
+    margin-top:24px; border-radius:16px; overflow:hidden; position:relative;
+    background: linear-gradient(120deg, var(--umber-dark) 0%, var(--umber-light) 100%);
+    padding:40px 32px;
+    min-height:220px;
+  }
+  .banner::before{
+    content:''; position:absolute; inset:0;
+    background-image: radial-gradient(rgba(246,196,67,0.35) 1px, transparent 1.5px);
+    background-size: 26px 26px; opacity:0.5;
+  }
+  .banner-inner{ position:relative; z-index:1; max-width:480px; }
+  .banner-badge{
+    display:inline-flex; align-items:center; gap:8px; background:var(--gold-bright);
+    color:var(--umber-dark); padding:6px 12px; border-radius:6px; font-weight:800;
+    font-family:'Manrope',sans-serif; font-size:0.8rem; margin-bottom:18px;
+  }
+  .banner h2{
+    color:#fff; font-size:clamp(1.6rem, 4vw, 2.3rem); line-height:1.12; margin-bottom:6px;
+  }
+  .banner h2 .hl{ color:var(--gold-bright); }
+  .banner p{ color:rgba(255,255,255,0.78); font-size:0.95rem; margin:8px 0 20px; }
+  .banner-cta{
+    display:inline-block; background:var(--gold-bright); color:var(--umber-dark);
+    padding:12px 24px; border-radius:24px; text-decoration:none; font-weight:800;
+    font-family:'Manrope',sans-serif; font-size:0.88rem; transition:transform .15s;
+  }
+  .banner-cta:hover{ transform:translateY(-1px); }
+
+  .meta-row{
+    display:flex; gap:36px; flex-wrap:wrap; padding:22px 0; border-bottom:1px solid var(--line);
+    margin-top:22px; font-size:0.92rem; color:var(--ink);
+  }
+  .meta-item{ display:flex; align-items:center; gap:9px; }
+  .meta-item .ico{ font-size:1.1rem; }
+
+  .price-block{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+    padding:22px 0;
+  }
+  .price-now{ font-family:'Manrope',sans-serif; font-size:2rem; font-weight:800; color:var(--gold); }
+  .price-was{ font-size:1.1rem; color:var(--muted); text-decoration:line-through; margin-left:10px; }
+  .trust-line{ font-size:0.88rem; color:var(--muted); display:flex; align-items:center; gap:6px; }
+
+  .btn-enroll{
+    display:block; width:100%; text-align:center; background:var(--navy); color:#fff;
+    padding:17px; border-radius:6px; text-decoration:none; font-family:'Manrope',sans-serif;
+    font-weight:800; font-size:1rem; letter-spacing:0.03em; border:none; cursor:pointer;
+    transition:background .2s;
+  }
+  .btn-enroll:hover{ background:var(--navy-deep); }
+
+  /* ---------- Tabs ---------- */
+  .tabs{
+    display:flex; gap:34px; margin-top:30px; border-bottom:1px solid var(--line);
+    overflow-x:auto;
+  }
+  .tab-btn{
+    background:none; border:none; padding:14px 2px; font-family:'Manrope',sans-serif;
+    font-weight:700; font-size:0.92rem; color:var(--muted); cursor:pointer;
+    border-bottom:3px solid transparent; white-space:nowrap; transition:color .2s, border-color .2s;
+  }
+  .tab-btn.active{ color:var(--gold); border-bottom-color:var(--gold); }
+  .tab-panel{ display:none; padding:28px 0 8px; max-width:720px; }
+  .tab-panel.active{ display:block; }
+  .tab-panel p{ color:var(--ink); font-size:0.98rem; }
+  .tab-panel ul{ padding-left:20px; color:var(--ink); }
+  .tab-panel li{ margin-bottom:8px; }
+
+  /* ---------- Trust checklist ---------- */
+  .section{ padding:50px 0; border-top:1px solid var(--line); }
+  .section-head{ max-width:600px; margin-bottom:34px; }
+  .section-head h2{ font-size:1.9rem; }
+  .section-head p{ color:var(--muted); }
+
+  .check-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  @media (max-width:640px){ .check-grid{ grid-template-columns:1fr; } }
+  .check-item{
+    display:flex; gap:14px; background:var(--card); border:1px solid var(--line);
+    border-radius:10px; padding:20px;
+  }
+  .check-item .mark{
+    width:30px; height:30px; border-radius:50%; background:var(--gold-bright);
+    color:var(--umber-dark); display:flex; align-items:center; justify-content:center;
+    font-weight:800; flex-shrink:0;
+  }
+  .check-item h3{ font-size:1.02rem; margin-bottom:4px; }
+  .check-item p{ font-size:0.88rem; color:var(--muted); margin:0; }
+
+  /* ---------- Form + summary ---------- */
+  .booking-grid{ display:grid; grid-template-columns:1.3fr 0.9fr; gap:28px; align-items:start; }
+  @media (max-width:900px){ .booking-grid{ grid-template-columns:1fr; } }
+
+  .form-card, .summary-card{
+    background:var(--card); border:1px solid var(--line); border-radius:12px; padding:32px;
+  }
+  .form-card h3, .summary-card h3{ font-size:1.3rem; }
+  .form-sub{ color:var(--muted); font-size:0.9rem; margin-bottom:26px; }
+
+  .field-group{ margin-bottom:20px; }
+  .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media (max-width:560px){ .field-row{ grid-template-columns:1fr; } }
+  label{
+    display:block; font-size:0.82rem; font-weight:600; color:var(--ink); margin-bottom:7px;
+  }
+  label .req{ color:var(--umber-light); margin-left:2px; }
+  input, select, textarea{
+    width:100%; background:var(--cream); border:1px solid var(--line);
+    color:var(--ink); padding:12px 14px; border-radius:6px; font-family:'Inter',sans-serif;
+    font-size:0.95rem; transition:border-color .2s;
+  }
+  input:focus, select:focus, textarea:focus{ outline:none; border-color:var(--gold); }
+  textarea{ min-height:90px; resize:vertical; }
+  .hint{ font-size:0.78rem; color:var(--muted); margin-top:6px; }
+  .field-error{ font-size:0.78rem; color:var(--umber-light); margin-top:6px; display:none; }
+  .field-error.show{ display:block; }
+
+  .divider-label{
+    display:flex; align-items:center; gap:12px; margin:30px 0 18px;
+    color:var(--gold); font-family:'Manrope',sans-serif; font-weight:800; font-size:1.02rem;
+  }
+  .divider-label::after{ content:''; flex:1; height:1px; background:var(--line); }
+
+  .question-box{
+    background:var(--cream); border:1px dashed var(--gold); border-radius:10px; padding:20px;
+  }
+  .question-box label{ color:var(--umber-dark); }
+
+  /* Summary / payment */
+  .summary-card{ position:sticky; top:96px; }
+  .row-line{
+    display:flex; justify-content:space-between; padding:12px 0; font-size:0.92rem;
+    border-bottom:1px solid var(--line); color:var(--ink);
+  }
+  .row-line.total{ font-weight:800; font-family:'Manrope',sans-serif; font-size:1.15rem; color:var(--navy); border-bottom:none; padding-top:16px; }
+  .summary-card.locked{ opacity:0.5; pointer-events:none; }
+  .btn-pay{
+    width:100%; background:var(--navy); color:#fff; border:none;
+    padding:16px; border-radius:6px; font-size:0.98rem; font-weight:800;
+    cursor:pointer; font-family:'Manrope',sans-serif; margin-top:18px; transition:background .2s;
+  }
+  .btn-pay:hover{ background:var(--navy-deep); }
+  .btn-pay:disabled{ background:#9AA6B2; cursor:not-allowed; }
+  .secure-line{ text-align:center; font-size:0.76rem; color:var(--muted); margin-top:12px; }
+
+  .status-banner{
+    margin-top:18px; padding:14px 18px; border-radius:6px; font-size:0.88rem; display:none;
+  }
+  .status-banner.show{ display:block; }
+  .status-banner.success{ background:#EAF4EC; border:1px solid #B7DCC0; color:#2E6B3E; }
+  .status-banner.error{ background:#FBEAE5; border:1px solid #E9BDAE; color:#9C4A2F; }
+
+  footer{ border-top:1px solid var(--line); padding:38px 0; }
+  .footer-grid{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+  .footer-meta{ color:var(--muted); font-size:0.82rem; }
+</style>
+</head>
+<body>
+
+<div class="emblem-strip" aria-hidden="true">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#F6C443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <!-- crown -->
+      <path d="M50 8 C44 8 40 13 40 18 C40 21 42 23 45 24 L55 24 C58 23 60 21 60 18 C60 13 56 8 50 8 Z"/>
+      <circle cx="50" cy="14" r="2.4" fill="#F6C443" stroke="none"/>
+      <!-- head -->
+      <ellipse cx="50" cy="42" rx="19" ry="17"/>
+      <!-- ears -->
+      <path d="M31 34 C22 32 18 40 22 48 C25 53 31 53 34 49"/>
+      <path d="M69 34 C78 32 82 40 78 48 C75 53 69 53 66 49"/>
+      <!-- trunk -->
+      <path d="M46 52 C44 60 40 64 42 72 C43 77 48 79 52 76 C55 74 54 70 51 69"/>
+      <!-- tusk -->
+      <path d="M56 54 L60 58"/>
+      <!-- belly -->
+      <path d="M38 58 C34 66 36 76 46 80 C54 83 62 80 63 72 C64 66 60 60 56 58"/>
+    </g>
+  </svg>
+  <div class="om">Shubh Labh</div>
+</div>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="badge">🪔</span> Rekha Sharma</div>
+    <nav class="nav-links">
+      <a href="#overview">Overview</a>
+      <a href="#how">How it works</a>
+      <a href="#form">Ask a question</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#form" class="nav-cta">Book Consultation</a>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <h1>Ask an Expert Astrologer &amp; Numerologist — And Get Your Karma Aligned</h1>
+
+  <div class="banner">
+    <div class="banner-inner">
+      <div class="banner-badge">🪔 Rekha Sharma</div>
+      <h2>ASTROLOGY &amp;<br><span class="hl">NUMEROLOGY</span></h2>
+      <p>One-on-one consultation with Rekha Sharma. Share your birth details and your question — get a personal reply on WhatsApp, and get your karma aligned.</p>
+      <a href="#form" class="banner-cta">Ask My Question</a>
+    </div>
+  </div>
+
+  <div class="meta-row">
+    <div class="meta-item"><span class="ico">📩</span> Reply within 3–5 days</div>
+    <div class="meta-item"><span class="ico">💬</span> Delivered over WhatsApp</div>
+    <div class="meta-item"><span class="ico">🔒</span> Private &amp; confidential</div>
+  </div>
+
+  <div class="price-block">
+    <div>
+      <span class="price-now">₹999</span>
+      <span class="price-was">₹1,999</span>
+    </div>
+    <div class="trust-line">✅ Personally reviewed and answered — not automated</div>
+  </div>
+
+  <a href="#form" class="btn-enroll">Ask My Question</a>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="overview">Overview</button>
+    <button class="tab-btn" data-tab="how">How It Works</button>
+    <button class="tab-btn" data-tab="astrologer">About Rekha</button>
+    <button class="tab-btn" data-tab="contact">Contact</button>
+  </div>
+
+  <div class="tab-panel active" id="tab-overview">
+    <p>🌟 Your birth chart and your name both carry patterns — astrology reads the first, numerology reads the second. Instead of a generic report, this consultation is built around <strong>one specific question</strong> you actually want answered — career, marriage timing, health, relocation, or anything else weighing on you.</p>
+    <ul>
+      <li>Your chart and numbers are reviewed by hand, not generated automatically.</li>
+      <li>You'll be asked for accurate birth details and the one question you'd like addressed.</li>
+      <li>Once payment is confirmed, your details go directly to Rekha for review.</li>
+    </ul>
+  </div>
+
+  <div class="tab-panel" id="tab-how">
+    <ul>
+      <li><strong>1. Share your details.</strong> Fill in your birth details and write the one question you want answered.</li>
+      <li><strong>2. Complete payment.</strong> Your request is only sent once payment is confirmed — nothing is submitted before that.</li>
+      <li><strong>3. Get your answer on WhatsApp.</strong> Rekha reviews your chart and replies directly to the WhatsApp number you provide, usually within 3–5 days.</li>
+    </ul>
+  </div>
+
+  <div class="tab-panel" id="tab-astrologer">
+    <p>Rekha Sharma is a practicing astrologer and numerologist, trained under Acharya Aditi Priya of The Right Astrologer. She works with clients on career, relationships, health, and major life decisions — blending birth chart analysis with name-based numerology to bring clarity to the question that's really on your mind, and help you get your karma aligned.</p>
+  </div>
+
+  <div class="tab-panel" id="tab-contact">
+    <p>Questions before booking? Reach out at <strong>rkhsharma63@gmail.com</strong> or message us on WhatsApp at <strong>+91 88738 82761</strong>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why people trust this reading</div>
+      <h2>What you can expect</h2>
+    </div>
+    <div class="check-grid">
+      <div class="check-item">
+        <div class="mark">✓</div>
+        <div><h3>Personally answered</h3><p>Every chart, name, and question is read by hand — never an automated report.</p></div>
+      </div>
+      <div class="check-item">
+        <div class="mark">✓</div>
+        <div><h3>Private &amp; confidential</h3><p>Your birth details and question are only ever seen by Rekha.</p></div>
+      </div>
+      <div class="check-item">
+        <div class="mark">✓</div>
+        <div><h3>Delivered on WhatsApp</h3><p>No apps to download — your reply comes straight to the number you share.</p></div>
+      </div>
+      <div class="check-item">
+        <div class="mark">✓</div>
+        <div><h3>Pay only when ready</h3><p>Your details are sent only after payment is confirmed — never before.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="form">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Step 1</div>
+      <h2>Your birth details &amp; your question</h2>
+      <p>Please double-check your time of birth against your birth certificate — a few minutes' difference can shift the chart.</p>
+    </div>
+
+    <div class="booking-grid">
+      <form id="kundliForm" class="form-card" novalidate>
+        <h3>About you</h3>
+        <p class="form-sub">So we know who this reading is for, and how to reach you on WhatsApp.</p>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="fullName">Full name<span class="req">*</span></label>
+            <input type="text" id="fullName" name="fullName" required placeholder="As per birth certificate">
+            <div class="field-error">Please enter your full name.</div>
+          </div>
+          <div class="field-group">
+            <label for="gender">Gender<span class="req">*</span></label>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Select</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Other / Prefer to describe</option>
+            </select>
+            <div class="field-error">Please select an option.</div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="email">Email<span class="req">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+            <div class="field-error">Please enter a valid email.</div>
+          </div>
+          <div class="field-group">
+            <label for="phone">WhatsApp number<span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+            <div class="hint">This is the number your reply will be sent to.</div>
+            <div class="field-error">Please enter a WhatsApp number.</div>
+          </div>
+        </div>
+
+        <div class="divider-label">Birth details</div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="dob">Date of birth<span class="req">*</span></label>
+            <input type="date" id="dob" name="dob" required>
+            <div class="field-error">Please enter your date of birth.</div>
+          </div>
+          <div class="field-group">
+            <label for="tob">Exact time of birth<span class="req">*</span></label>
+            <input type="time" id="tob" name="tob" required>
+            <div class="hint">Check your birth certificate — accuracy matters here.</div>
+            <div class="field-error">Please enter your time of birth.</div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="pob">Place of birth — city, state, country<span class="req">*</span></label>
+          <input type="text" id="pob" name="pob" required placeholder="e.g. Pune, Maharashtra, India">
+          <div class="field-error">Please enter your place of birth.</div>
+        </div>
+
+        <div class="divider-label">Your question</div>
+
+        <div class="field-group question-box">
+          <label for="question">What's the one thing you'd like this reading to answer?<span class="req">*</span></label>
+          <textarea id="question" name="question" required placeholder="Be as specific as you can — e.g. 'Is this a good time to change careers?' or 'When is my marriage likely to happen?'"></textarea>
+          <div class="field-error">Please share your question.</div>
+        </div>
+
+        <button type="submit" class="btn-enroll" style="margin-top:8px;">Continue to payment</button>
+      </form>
+
+      <div class="summary-card locked" id="summaryCard">
+        <h3>Order summary</h3>
+        <div class="row-line"><span>Astrology &amp; numerology reading</span><span>₹999</span></div>
+        <div class="row-line total"><span>Total</span><span>₹999</span></div>
+        <p class="form-sub" style="margin-top:14px;">Fill in your details and question, then select "Continue to payment" to unlock this step.</p>
+        <button class="btn-pay" id="payButton" disabled>Complete details first</button>
+        <div class="secure-line">🔒 Your details are sent only after payment succeeds.</div>
+        <div class="status-banner" id="statusBanner"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap footer-grid">
+    <div class="brand"><span class="badge">🪔</span> Rekha Sharma</div>
+    <div class="footer-meta">rkhsharma63@gmail.com · WhatsApp +91 88738 82761</div>
+  </div>
+</footer>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  // ---------- Tabs ----------
+  document.querySelectorAll('.tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // ---------- Form + Payment gating ----------
+  const form = document.getElementById('kundliForm');
+  const summaryCard = document.getElementById('summaryCard');
+  const payButton = document.getElementById('payButton');
+  const statusBanner = document.getElementById('statusBanner');
+
+  let kundliData = null; // holds validated form data until payment succeeds
+
+  function showBanner(type, message){
+    statusBanner.className = 'status-banner show ' + type;
+    statusBanner.textContent = message;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    let valid = true;
+    const fields = form.querySelectorAll('[required]');
+    fields.forEach(function(field){
+      const errorEl = field.closest('.field-group').querySelector('.field-error');
+      const isEmpty = !field.value || field.value.trim() === '';
+      if(isEmpty){
+        valid = false;
+        if(errorEl) errorEl.classList.add('show');
+        field.style.borderColor = '#B8842E';
+      } else {
+        if(errorEl) errorEl.classList.remove('show');
+        field.style.borderColor = '';
+      }
+    });
+
+    if(!valid){
+      showBanner('error', 'Please fill in every required field, including your question, before continuing.');
+      return;
+    }
+
+    // Collect data, but DO NOT submit anywhere yet — payment gates this.
+    kundliData = Object.fromEntries(new FormData(form).entries());
+
+    summaryCard.classList.remove('locked');
+    payButton.disabled = false;
+    payButton.textContent = 'Pay ₹999 & send my question';
+    document.getElementById('summaryCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    statusBanner.className = 'status-banner';
+  });
+
+  // Paste your Formspree endpoint here once you've created a form at formspree.io
+  // (used to email you the submitted birth details + question after payment).
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzjnbye";
+
+  payButton.addEventListener('click', async function(){
+    if(!kundliData){
+      showBanner('error', 'Please complete the form first.');
+      return;
+    }
+
+    payButton.disabled = true;
+    payButton.textContent = 'Preparing secure payment…';
+
+    // Step 1: ask OUR SERVER (Netlify Function) to create a real Razorpay order.
+    // The price is set server-side in create-order.js, never trusted from the browser.
+    let order;
+    try{
+      const orderRes = await fetch('/.netlify/functions/create-order', { method: 'POST' });
+      if(!orderRes.ok) throw new Error('Order creation failed');
+      order = await orderRes.json();
+    }catch(err){
+      showBanner('error', 'Payment could not be started. Please try again in a moment.');
+      payButton.disabled = false;
+      payButton.textContent = 'Pay ₹999 & send my question';
+      return;
+    }
+
+    const options = {
+      key: "rzp_test_TAuid0AmO3rhsw", // Replace with YOUR Razorpay Key ID (rzp_live_... when ready)
+      order_id: order.id,             // Real order created server-side — amount/currency come from it
+      name: "Rekha Sharma — Astrology & Numerology",
+      description: "Astrology & Numerology Reading",
+      prefill: {
+        name: kundliData.fullName,
+        email: kundliData.email,
+        contact: kundliData.phone
+      },
+      theme: { color: "#12283F" },
+      handler: async function(response){
+        // Step 2: verify the payment signature on OUR SERVER before submitting anything.
+        try{
+          const verifyRes = await fetch('/.netlify/functions/verify-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(response)
+          });
+          const verifyData = await verifyRes.json();
+
+          if(!verifyData.verified){
+            showBanner('error', 'We could not verify this payment, so your details have not been submitted. Please contact us with your payment ID: ' + response.razorpay_payment_id);
+            payButton.disabled = false;
+            payButton.textContent = 'Pay ₹999 & send my question';
+            return;
+          }
+
+          // Step 3: payment verified — now (and only now) send the details + question.
+          // Your astrologer receives this by email and replies to the WhatsApp number provided.
+          await fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ ...kundliData, razorpay_payment_id: response.razorpay_payment_id })
+          });
+
+          showBanner('success', 'Payment received — your question has been submitted! You will hear back on WhatsApp within 3–5 days.');
+          payButton.textContent = 'Submitted ✓';
+          form.reset();
+        }catch(err){
+          showBanner('error', 'Something went wrong confirming your payment. Please contact us with your payment ID: ' + response.razorpay_payment_id);
+          payButton.disabled = false;
+          payButton.textContent = 'Pay ₹999 & send my question';
+        }
+      },
+      modal: {
+        ondismiss: function(){
+          showBanner('error', 'Payment was not completed, so your details have not been submitted. You can try again anytime.');
+          payButton.disabled = false;
+          payButton.textContent = 'Pay ₹999 & send my question';
+        }
+      }
+    };
+
+    const rzp = new Razorpay(options);
+    rzp.on('payment.failed', function(){
+      showBanner('error', 'Payment failed. Your details have not been submitted — please try again.');
+      payButton.disabled = false;
+      payButton.textContent = 'Pay ₹999 & send my question';
+    });
+    rzp.open();
+  });
+</script>
+
+</body>
+</html>
