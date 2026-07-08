@@ -117,10 +117,10 @@
     object-fit:contain; object-position:bottom; z-index:1; pointer-events:none;
   }
   @media (max-width:700px){
-    .banner{ display:flex; flex-direction:row; align-items:center; gap:14px; }
-    .banner-inner{ max-width:56%; flex:1 1 56%; }
+    .banner{ display:flex; flex-direction:row; align-items:flex-end; gap:14px; }
+    .banner-inner{ max-width:56%; flex:1 1 56%; align-self:flex-start; }
     .banner-photo{
-      display:block; position:static; flex:0 0 auto;
+      display:block; position:static; flex:0 0 auto; align-self:flex-end;
       width:40%; max-width:150px; height:auto; max-height:230px;
       object-fit:contain; object-position:bottom; margin:0;
     }
